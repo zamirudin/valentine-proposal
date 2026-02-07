@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="css/valentine.css" />
+  </head>
+  <body>
+    <div id="valentineQuestion"><b>Will you be my valentine?</b></div>
+    <h1 title="dare">I dare you to choose no</h1>
+    <button class="answerButton" onclick="location.href='thankyou.html'">
+      Yes
+    </button>
+    <button class="answerButton no-button" id="noButton">I don't want</button>
+    <br />
+    <img src="please.png" height="498px" width="150px" alt="cat asking question" class="responsive" onclick="location.href='thankyou.html'" />
+
+    <script>
+      const noButton = document.getElementById("noButton");
+      
+      const questions = [
+        "Are you sure baby? 🥺",
+        "Really sure? 😢",
+        "Think again please! 💕",
+        "Don't break my heart, Anagha! 💔",
+        "Please say yes! 🙏",
+        "Are you absolutely sure? 😞",
+        "Give me a chance! 🥰",
+        "Pretty please? ✨",
+        "My heart will be sad! 😢",
+        "Don't say no! 😢",
+        "But why sayang? 🥺",
+        "Please reconsider! 💕",
+        "One chance? 🥰",
+        "I love you! 💕",
+        "Be mine? 💕"
+      ];
+      
+      let clickCount = parseInt(localStorage.getItem('noClickCount')) || 0;
+      
+      // Store the questions that were shown
+      if (!localStorage.getItem('noQuestionsShown')) {
+        localStorage.setItem('noQuestionsShown', JSON.stringify([]));
+      }
+      
+      noButton.addEventListener("click", function () {
+        clickCount++;
+        
+        // Update click count in localStorage
+        localStorage.setItem('noClickCount', clickCount.toString());
+        
+        // Change button text to a random question
+        const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+        noButton.textContent = randomQuestion;
+        
+        // Store the question shown
+        const questionsShown = JSON.parse(localStorage.getItem('noQuestionsShown'));
+        questionsShown.push(randomQuestion);
+        localStorage.setItem('noQuestionsShown', JSON.stringify(questionsShown));
+        
+        // Move button to random position
+        const x = Math.random() * (window.innerWidth - noButton.offsetWidth - 100);
+        const y = Math.random() * (window.innerHeight - noButton.offsetHeight - 100);
+        
+        noButton.style.position = "fixed";
+        noButton.style.left = Math.max(10, x) + "px";
+        noButton.style.top = Math.max(10, y) + "px";
+        
+        // Increase Yes button size
+        var yesButton = document.querySelector(
+          'button[onclick*="thankyou.html"]'
+        );
+        var currentFontSize = parseInt(
+          window.getComputedStyle(yesButton).fontSize
+        );
+        yesButton.style.fontSize = currentFontSize + 5 + "px";
+        
+        // Increase please.png image size (keep aspect ratio)
+        var pleaseImg = document.querySelector("img[src*='please.png']");
+        var currentScale = parseFloat(pleaseImg.dataset.scale) || 1;
+        var newScale = currentScale + 0.1;
+        pleaseImg.dataset.scale = newScale;
+        pleaseImg.style.transform = "scale(" + newScale + ")";
+        pleaseImg.style.transformOrigin = "center center";
+      });
+    </script>
+  </body>
+</html>

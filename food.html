@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Selection</title>
+    <link rel="stylesheet" href="css/food.css" />
+  </head>
+  <body>
+    <div id="foodquestion">
+      <b>What food would you like to eat ?</b>
+    </div>
+
+    <div class="food-selection">
+      <div class="food-item">
+        <img src="food/burgers.jpeg" alt="Burgers, fries and fried chicken" />
+        <label
+          ><input
+            type="checkbox"
+            name="food"
+            value="Burgers, fries and fried chicken"
+          />
+          burgers and fried chicken</label
+        >
+      </div>
+      <div class="food-item">
+        <img src="food/koreanfood.jpeg" alt="koreanfood" />
+        <label
+          ><input type="checkbox" name="food" value="Korean food" /> korean
+          food</label
+        >
+      </div>
+      <div class="food-item">
+        <img src="food/pasta.jpeg" alt="pasta" />
+        <label><input type="checkbox" name="food" value="pasta" /> pasta</label>
+      </div>
+      <div class="food-item">
+        <img src="food/pizza.jpeg" alt="pizza" />
+        <label><input type="checkbox" name="food" value="pizza" /> pizza</label>
+      </div>
+      <div class="food-item">
+        <img src="food/gepuk.jpg" alt="gepuk" />
+        <label><input type="checkbox" name="food" value="gepuk" /> gepuk</label>
+      </div>
+      <div class="food-item">
+        <img src="food/steak.jpeg" alt="steak" />
+        <label><input type="checkbox" name="food" value="steak" /> steak</label>
+      </div>
+      <div class="food-item">
+        <img src="food/sushi.jpeg" alt="sushi" />
+        <label><input type="checkbox" name="food" value="sushi" /> sushi</label>
+      </div>
+    </div>
+    <button class="button" onclick="saveAndContinue()">
+      Continue Hihihihih... 
+    </button>
+
+    <script>
+      function saveAndContinue() {
+        // Get all checked food items
+        const checkboxes = document.querySelectorAll('input[name="food"]:checked');
+        const selectedFood = Array.from(checkboxes).map(cb => cb.value);
+        
+        // Save to localStorage
+        localStorage.setItem('selectedFood', JSON.stringify(selectedFood));
+        
+        // Go to dessert page
+        window.location.href = 'dessert.html';
+      }
+    </script>
+  </body>
+</html>

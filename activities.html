@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+    <link rel="stylesheet" href="css/activities.css" />
+  </head>
+  <body>
+    <div id="activityquestion"><b>What are we doing after ?</b></div>
+    <div class="activities-selection">
+      <div class="activity-item">
+        <img src="activities/aquarium.jpeg" alt="aquarium" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="aquarium"
+          />aquarium</label
+        >
+      </div>
+      <div class="activity-item">
+        <img src="activities/arcade.jpeg" alt="arcade" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="arcade"
+          />arcade</label
+        >
+      </div>
+      <div class="activity-item">
+        <img src="activities/cinema.jpeg" alt="cinema" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="cinema"
+          />cinema</label
+        >
+      </div>
+      <div class="activity-item">
+        <img src="activities/cuddle.gif" alt="cuddle" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="cuddle"
+          />cuddle</label
+        >
+      </div>
+      <div class="activity-item">
+        <img src="activities/kunsthalle.jpeg" alt="kunsthalle" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="kunsthalle"
+          />museums</label
+        >
+      </div>
+      <div class="activity-item">
+        <img src="activities/park.jpeg" alt="park.jpeg" />
+        <label
+          ><input
+            type="checkbox"
+            name="activities"
+            value="park"
+          />park</label
+        >
+      </div>
+    </div>
+    <button class="button" onclick="saveAndFinish()">
+      Last page babyy...
+    </button>
+
+    <script>
+      function saveAndFinish() {
+        // Get all checked activity items
+        const checkboxes = document.querySelectorAll('input[name="activities"]:checked');
+        const selectedActivities = Array.from(checkboxes).map(cb => cb.value);
+        
+        // Save to localStorage
+        localStorage.setItem('selectedActivities', JSON.stringify(selectedActivities));
+        
+        // Go to last page
+        window.location.href = 'lastpage.html';
+      }
+    </script>
+  </body>
+</html>

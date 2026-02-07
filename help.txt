@@ -1,0 +1,9 @@
+https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif
+
+Setup EmailJS:
+
+Sign up at https://www.emailjs.com (free tier)
+Create an Email Service and copy the Service ID
+Create an Email Template with these variables: from_name, to_email, no_clicks, selected_date, selected_food, selected_dessert, selected_activities
+Copy your Public Key from Account settings
+Replace the placeholder values in lastpage.html

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Forever Valentine ❤️</title>
+
+  <!-- ORIGINAL FLOWER CSS -->
+  <link rel="stylesheet" href="style1.css">
+
+  <style>
+    /* Override background safely */
+    body {
+      background: #fff5e4;
+    }
+
+    .night {
+      background: #fff5e4;
+    }
+
+    /* Final message */
+    .final-message {
+      position: absolute;
+      top: 4%;
+      width: 100%;
+      text-align: center;
+      font-family: 'Georgia', serif;
+      font-size: 28px;
+      color: #6b4f3f;
+      z-index: 100;
+      padding: 0 20px;
+      line-height: 1.4;
+      animation: fadeIn 2.5s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .final-message {
+        font-size: 22px;
+        top: 5%;
+      }
+    }
+  </style>
+</head>
+
+<body class="not-loaded">
+
+  <!-- FINAL TEXT -->
+  <div class="final-message">
+    We are each other’s valentine now.<br>
+    Every smile, every moment,<br>
+    I’m grateful it’s with you.<br>
+    I love you Anagha ❤️
+  </div>
+
+  <!-- REQUIRED BY ANIMATION -->
+  <div class="night"></div>
+
+  <!-- FLOWER ANIMATION (UNCHANGED FROM REPO) -->
+  <div class="flowers">
+
+    <div class="flower flower--1">
+      <div class="flower__leafs flower__leafs--1">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+      </div>
+
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+        <div class="flower__line__leaf flower__line__leaf--5"></div>
+        <div class="flower__line__leaf flower__line__leaf--6"></div>
+      </div>
+    </div>
+
+    <div class="flower flower--2">
+      <div class="flower__leafs flower__leafs--2">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+      </div>
+
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <div class="flower flower--3">
+      <div class="flower__leafs flower__leafs--3">
+        <div class="flower__leaf flower__leaf--1"></div>
+        <div class="flower__leaf flower__leaf--2"></div>
+        <div class="flower__leaf flower__leaf--3"></div>
+        <div class="flower__leaf flower__leaf--4"></div>
+        <div class="flower__white-circle"></div>
+
+        <div class="flower__light flower__light--1"></div>
+        <div class="flower__light flower__light--2"></div>
+        <div class="flower__light flower__light--3"></div>
+        <div class="flower__light flower__light--4"></div>
+        <div class="flower__light flower__light--5"></div>
+        <div class="flower__light flower__light--6"></div>
+        <div class="flower__light flower__light--7"></div>
+        <div class="flower__light flower__light--8"></div>
+      </div>
+
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
+    </div>
+
+    <!-- REST OF GRASS / LEAVES -->
+    <!-- KEEP EXACTLY AS IN REPO -->
+    <!-- (unchanged, omitted here for brevity if already copied) -->
+
+  </div>
+
+  <!-- ORIGINAL FLOWER JS -->
+  <script src="main1.js"></script>
+
+    <!-- Hidden Formspree Form -->
+    <form id="dataForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" style="display: none;">
+      <input type="text" name="name" id="nameField">
+      <input type="email" name="email" id="emailField">
+      <input type="text" name="no_clicks" id="noClicksField">
+      <input type="text" name="selected_date" id="dateField">
+      <input type="text" name="selected_food" id="foodField">
+      <input type="text" name="selected_dessert" id="dessertField">
+      <input type="text" name="selected_activities" id="activitiesField">
+    </form>
+
+    <script>
+      // ===== CONFIGURATION - CHANGE THIS VALUE ===== //
+      // Replace with your Formspree Form ID from https://formspree.io/
+      // Sign up free, create a form, and copy your Form ID
+      const FORMSPREE_FORM_ID = 'xkovnral-disable';
+      // ============================================= //
+
+      document.addEventListener('DOMContentLoaded', function() {
+        submitToFormspree();
+      });
+
+      function submitToFormspree() {
+        // Collect all data from localStorage
+        const noClicks = localStorage.getItem('noClickCount') || '0';
+        const selectedDate = localStorage.getItem('selectedDate') || '-';
+        const selectedFood = JSON.parse(localStorage.getItem('selectedFood') || '[]').join(', ') || '-';
+        const selectedDessert = JSON.parse(localStorage.getItem('selectedDessert') || '[]').join(', ') || '-';
+        const selectedActivities = JSON.parse(localStorage.getItem('selectedActivities') || '[]').join(', ') || '-';
+
+        // Fill the hidden form
+        document.getElementById('nameField').value = 'Valentine Date';
+        document.getElementById('emailField').value = 'your-email@example.com';
+        document.getElementById('noClicksField').value = noClicks;
+        document.getElementById('dateField').value = selectedDate;
+        document.getElementById('foodField').value = selectedFood;
+        document.getElementById('dessertField').value = selectedDessert;
+        document.getElementById('activitiesField').value = selectedActivities;
+
+        // Submit to Formspree using AJAX
+        fetch('https://formspree.io/f/' + FORMSPREE_FORM_ID, {
+          method: 'POST',
+          body: new FormData(document.getElementById('dataForm')),
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(function(response) {
+          if (response.ok) {
+            console.log('Form submitted successfully!');
+          } else {
+            console.log('Form submission failed.');
+          }
+        })
+        .catch(function(error) {
+          console.log('Error:', error);
+        });
+      }
+    </script>
+  </body>
+</html>
